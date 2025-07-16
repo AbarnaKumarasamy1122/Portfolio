@@ -1,5 +1,18 @@
 {
   "build": {
-    "env": "python"
+    "builder": "NIXPACKS",
+    "nixpacksConfig": {
+      "languages": {
+        "python": "3.11"
+      },
+      "phases": {
+        "install": {
+          "cmds": ["pip install -r requirements.txt"]
+        },
+        "start": {
+          "cmds": ["gunicorn contact.wsgi:application"]
+        }
+      }
+    }
   }
 }
