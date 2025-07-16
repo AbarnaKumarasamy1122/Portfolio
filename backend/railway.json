@@ -2,10 +2,10 @@
   "build": {
     "builder": "NIXPACKS",
     "nixpacksConfig": {
+      "providers": ["python"],
       "languages": {
         "python": "3.11"
       },
-      "providers": ["python"],
       "phases": {
         "setup": {
           "nixPkgs": ["python311", "pip", "gunicorn"]
@@ -18,7 +18,9 @@
           ]
         },
         "start": {
-          "cmds": ["gunicorn contact.wsgi:application"]
+          "cmds": [
+            "gunicorn contact.wsgi:application --bind 0.0.0.0:$PORT"
+          ]
         }
       }
     }
