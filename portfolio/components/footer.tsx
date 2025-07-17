@@ -213,9 +213,7 @@ export default function Footer() {
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="flex items-center space-x-2">
-                <p className={`${themeClasses.textMuted} text-sm`}>© 2024 K.Abarna. All rights reserved. Made with</p>
-                <Heart className="w-4 h-4 text-red-400 animate-pulse" />
-                <p className={`${themeClasses.textMuted} text-sm`}>in Sri Lanka</p>
+                <p className={`${themeClasses.textMuted} text-sm`}>© 2024 K.Abarna. All rights reserved</p>
               </div>
 
               <div className="flex items-center space-x-6">
