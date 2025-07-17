@@ -59,7 +59,7 @@ MIDDLEWARE = [
 
 # CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    'https://portfolio-bye3scy8j-abarnakumarasamy1122s-projects.vercel.app/',
+    'https://portfolio-two-chi-69.vercel.app/',
 ]
 
 # Email settings
