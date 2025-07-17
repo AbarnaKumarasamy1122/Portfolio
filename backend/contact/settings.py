@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-s%y--2&qder5zy&c@a0&$ogp^v2ycl!pru^9tmh2em=_$mnq46
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-production-9322.up.railway.app']
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -55,10 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    'https://portfolio-2czxsiiul-abarnakumarasamy1122s-projects.vercel.app/',  
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
