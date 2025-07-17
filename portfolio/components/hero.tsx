@@ -1,15 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ArrowRight, ChevronDown, Code } from "lucide-react"
-import { useTheme } from "./theme-provider"
-
+import { motion } from "framer-motion";
+import { ArrowRight, ChevronDown, Code } from "lucide-react";
+import { useTheme } from "./theme-provider";
 
 export default function Hero() {
-  const { themeClasses } = useTheme()
+  const { themeClasses } = useTheme();
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -17,7 +19,7 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center lg:items-start">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -63,14 +65,18 @@ export default function Hero() {
                 MERN stack
               </span>
               ,{" "}
-              <span className="text-pink-400 font-bold hover:text-pink-300 transition-colors cursor-pointer">Next.js</span>
+              <span className="text-pink-400 font-bold hover:text-pink-300 transition-colors cursor-pointer">
+                Next.js
+              </span>
               ,{" "}
               <span className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors cursor-pointer">
                 Flutter
-              </span>,{" "}
+              </span>
+              ,{" "}
               <span className="text-blue-400 font-bold hover:text-yellow-300 transition-colors cursor-pointer">
                 Django
-              </span>,{" "}
+              </span>
+              ,{" "}
               <span className="text-green-400 font-bold hover:text-yellow-300 transition-colors cursor-pointer">
                 PHP
               </span>
@@ -102,18 +108,18 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            className="relative flex justify-center lg:justify-end"
           >
             <div className="relative group">
               {/* Decorative Elements */}
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
 
               {/* Main Image Container */}
-              <div className="relative overflow-hidden rounded-3xl border-4 border-white/10 backdrop-blur-sm">
+              <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] overflow-hidden rounded-3xl border-4 border-white/10 backdrop-blur-sm">
                 <img
                   src="./Image.jpg"
                   alt="Abarna Kumarasamy - Full Stack Developer"
-                  className="w-full h-[600px] object-cover group-hover:scale-110 transition-transform duration-700 rounded-full"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 rounded-full"
                 />
 
                 {/* Overlay */}
@@ -127,7 +133,9 @@ export default function Hero() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <div className="w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
-                        <span className={`${themeClasses.text} font-semibold`}>Available for opportunities</span>
+                        <span className={`${themeClasses.text} font-semibold`}>
+                          Available for opportunities
+                        </span>
                       </div>
                       <div className="text-purple-400">
                         <Code className="w-6 h-6" />
@@ -135,17 +143,6 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Floating Tech Icons */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-cyan-500 p-4 rounded-2xl shadow-xl animate-bounce">
-                <span className="text-2xl">⚛️</span>
-              </div>
-              <div className="absolute top-1/2 -left-4 bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-2xl shadow-xl animate-bounce delay-500">
-                <span className="text-2xl">🟢</span>
-              </div>
-              <div className="absolute -bottom-4 right-1/4 bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-2xl shadow-xl animate-bounce delay-1000">
-                <span className="text-4xl">▲</span>
               </div>
             </div>
           </motion.div>
@@ -168,5 +165,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
