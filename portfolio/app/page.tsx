@@ -13,7 +13,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 export default function Home() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen overflow-x-hidden">
+      <div className="min-h-screen overflow-x-hidden px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <Navigation />
         <Hero />
         <Stats />
